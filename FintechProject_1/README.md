@@ -6,4 +6,4 @@ With PyProjects, learning Python has never been more engaging and rewarding. Exp
 
 Join our vibrant community of Python learners and developers, where collaboration and knowledge-sharing thrive. Want to contribute your own project or suggest an idea? We welcome your creativity and input! Simply send a request to become a collaborator and help shape the future of PyProjects.
 
-Are you ready to elevate your Python skills and unleash your coding potential? Let's code, learn, and grow together at PyProjects!" 🚀🌟
+Are you ready to elevate your Python skills and unleash your coding potential?  Let's code, learn, and grow together at PyProjects!" 🚀🌟
