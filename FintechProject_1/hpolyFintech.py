@@ -40,6 +40,21 @@ def accountData():
     except JSONDecodeError:
         return
 
+def save_amount(accountNumber, amount):
+    """
+    This function will update the amount of a user based on deposit and withdrawal
+    :param accountNumber:
+    :param amount:
+    :return:
+    """
+    available_data = accountData()
+    if available_data:
+        for content in available_data:
+            if accountNumber == content["accountNumber"]:
+                content["amount"] += amount
+                return content["amount"]
+
+
 def user_registration(*args, **kwargs):
     """
     A user is expected to pass the following details for registration
