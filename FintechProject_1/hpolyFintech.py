@@ -40,7 +40,7 @@ def accountData():
     except JSONDecodeError:
         return
 
-def save_amount(accountNumber, amount):
+def update_amount(accountNumber, amount, sign):
     """
     This function will update the amount of a user based on deposit and withdrawal
     :param accountNumber:
@@ -51,10 +51,18 @@ def save_amount(accountNumber, amount):
     if available_data:
         for content in available_data:
             if accountNumber == content["accountNumber"]:
-                content["amount"] += amount
+                if sign == "+":
+                    content["amount"] += amount
+                elif sign == "-":
+                    content["amount"] -= amount
                 with open("accountData.json", "r") as file:
                     json.dump(available_data, file)
                 return content["amount"]
+def save_amount(accountNumber, amount, sign="+"):
+    update_amount(accountNumber, amount, sign)
+
+def deduct_amount(accountNumber, amount, sign="-"):
+    update_amount(accountNumber, amount, sign)
 
 
 def user_registration(*args, **kwargs):
