@@ -52,6 +52,8 @@ def save_amount(accountNumber, amount):
         for content in available_data:
             if accountNumber == content["accountNumber"]:
                 content["amount"] += amount
+                with open("accountData.json", "r") as file:
+                    json.dump(available_data, file)
                 return content["amount"]
 
 
@@ -183,3 +185,4 @@ def withdrawals(accountNumber, pin):
     
     Reach out to me if you need further clarity or encounter any challenge.
     """
+
